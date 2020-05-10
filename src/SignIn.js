@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {UserSignIn} from './Actions'
 function SignIn(props) {
-    const [email, setEmail] = useState('');
+    const [email,   setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const submitHandler = (e) => {
