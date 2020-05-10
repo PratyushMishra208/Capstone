@@ -1,0 +1,89 @@
+{
+  "products": [
+    {
+      "title": "Apricot",
+      "quantity": "200000",
+      "price": "10",
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
+      "id": 4
+    },
+    {
+      "id": 7,
+      "title": "Graps",
+      "quantity": 9,
+      "price": 180,
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+    },
+    {
+      "id": 8,
+      "title": "Guava",
+      "quantity": 3,
+      "price": 270,
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+    },
+    {
+      "id": 9,
+      "title": "Stawberry",
+      "quantity": 5,
+      "price": 600,
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+    },
+    {
+      "id": 10,
+      "title": "Lemon",
+      "quantity": 4,
+      "price": 100,
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+    },
+    {
+      "id": 11,
+      "title": "Jackfruit",
+      "quantity": 30,
+      "price": 170,
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+    },
+    {
+      "title": "mango",
+      "quantity": "19",
+      "price": "170000",
+      "description": "24Suppose we have a UI to fetch some user data from a remote server when a button is clicked. (For brevity, we'll just show the action triggering code.)",
+      "id": "632f0768-1af5-4ec4-86da-a62af6cb6586"
+    }
+  ],
+  "UserData": [
+    {
+      "username": "Rahul",
+      "email": "rahul@gamil.com",
+      "address": "7/1 nand puri kanker khera Meerut Cantt",
+      "password": "123456"
+    },
+    {
+      "id": "929dddad-b4b5-4daa-bfb0-9892d6ca3911",
+      "username": "rahul",
+      "email": "abc@gamil.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    },
+    {
+      "id": "8824c6e7-2aab-4146-ba19-072ef8bd07de",
+      "username": "kavya",
+      "email": "123@gmail.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    },
+    {
+      "id": "b9039ddf-a082-4102-91f9-451ecc622666",
+      "username": "karan",
+      "email": "karanclt_1@gmail.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    },
+    {
+      "id": "e1f8c441-a620-4515-afc8-7c67e3225c27",
+      "username": "rahul",
+      "email": "rohankumar.mrtt@gmail.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    }
+  ]
+}
