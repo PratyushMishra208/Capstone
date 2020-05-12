@@ -42,7 +42,7 @@ function Header(props) {
                                 <li className="nav-item">
                                     <Link to="/Add Product" className="nav-link">Add Product</Link>
                                 </li>
-                                {UserId.length <= 0
+                                 {UserId.length <= 0
                                     ?
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/SignIn">LogIn</Link>
@@ -50,7 +50,7 @@ function Header(props) {
                                     :
                                     <li className="nav-item">
                                         {/* <Link className="nav-link" to="">SignOut</Link> */}
-                                        <p className="nav-link" onClick={HandleSignOut} >SignOut</p>
+                                        <Link className="nav-link" onClick={HandleSignOut} >SignOut</Link>
                                     </li>
 
                                 }

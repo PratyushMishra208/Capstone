@@ -37,6 +37,7 @@ const SignIn = async (payload) => {
     const response = await axios.get("http://localhost:4000/UserData?email=" + payload[0]);
     const data = await response.data
     if (data.length > 0) {
+
         console.log(data[0].email, data[0].password)
         if (payload[0] === data[0].email && payload[1] === data[0].password) {
             return data[0].id
@@ -44,6 +45,7 @@ const SignIn = async (payload) => {
         else {
             return "Password_Error"
         }
+
     }
     else {
         return "NO_User"
@@ -88,8 +90,8 @@ const ProductUpdateFunc = async(payload)=>{
     const insertObject = {
         // "id": payload[0],
         "title": payload[1],
-        "quantity": payload[2],
-        "price": payload[3],
+        "quantity": payload[3],
+        "price": payload[2],
         "description": payload[4]
     }
     const response = await  axios.put("http://localhost:4000/products/"+payload[0], insertObject);
@@ -108,7 +110,7 @@ function* UserCreate({ payload }) {
     const response=yield call(createUser, payload)
     console.log(response)
     if(response.status===200){
-        yield put (GetMessage("Your Account is Successful Update"))
+        yield put (GetMessage("Your Account is Successful Created"))
     }
     else{
         yield put (GetMessage("Your Account  is not Created ! Please Try again"))
@@ -148,7 +150,8 @@ function* ProductDetail({payload}){
 
 function* ProductUpdate({payload}){
     const response=yield call(ProductUpdateFunc,payload)
-    if(response.status===201){
+    console.log(response)
+    if(response.status===200){
       yield put (GetMessage("Your Product is Successful Update"))
     }
     else{

@@ -1,20 +1,6 @@
 {
   "products": [
     {
-      "title": "Apricot",
-      "quantity": "200000",
-      "price": "10",
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-      "id": 4
-    },
-    {
-      "id": 7,
-      "title": "Graps",
-      "quantity": 9,
-      "price": 180,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
-    },
-    {
       "id": 8,
       "title": "Guava",
       "quantity": 3,
@@ -48,18 +34,24 @@
       "price": "170000",
       "description": "24Suppose we have a UI to fetch some user data from a remote server when a button is clicked. (For brevity, we'll just show the action triggering code.)",
       "id": "632f0768-1af5-4ec4-86da-a62af6cb6586"
+    },
+    {
+      "id": "a047c780-b199-4065-872e-398621e4f670",
+      "title": "mango",
+      "quantity": "10",
+      "price": "1000",
+      "description": "sweet hgbkgiungkngykbgkgkhgkybgf ygbygiu gh bfu6kvrbkugnykgk,yugk "
     }
   ],
   "UserData": [
     {
       "username": "Rahul",
       "email": "rahul@gamil.com",
-      "address": "7/1 nand puri kanker khera Meerut Cantt",
       "password": "123456"
     },
     {
       "id": "929dddad-b4b5-4daa-bfb0-9892d6ca3911",
-      "username": "rahul",
+      "username": "ram",
       "email": "abc@gamil.com",
       "password": "123456",
       "comfirmPassword": "123456"
@@ -80,8 +72,29 @@
     },
     {
       "id": "e1f8c441-a620-4515-afc8-7c67e3225c27",
-      "username": "rahul",
-      "email": "rohankumar.mrtt@gmail.com",
+      "username": "shyam",
+      "email": "shyam@gmail.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    },
+    {
+      "id": "d4216487-b50a-40ee-902e-cd377f60d83a",
+      "username": "Pratyush",
+      "email": "pratyush@gmail.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    },
+    {
+      "id": "6150985a-72a3-4e7d-b5aa-2de3da289fd8",
+      "username": "Pinki",
+      "email": "pinki@gmail.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    },
+    {
+      "id": "d76c16d3-bfb5-4e8c-8161-0f0a0a1c598f",
+      "username": "sachin ",
+      "email": "sachin@gmail.com",
       "password": "123456",
       "comfirmPassword": "123456"
     }

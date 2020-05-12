@@ -25,7 +25,7 @@ function ProductList(props) {
     return (
         <div className="container">
             <div className="row mt-2 mb-0 mx-3 " >
-                <div className="col-12 text-right">
+                <div className="col-12 text-center">
                     <h3 >PRODUCT LIST</h3> </div>
             </div>
             <hr className="m-0" />
@@ -70,6 +70,7 @@ function ProductList(props) {
                                 })}
                             </tbody>
                         </table>
+                        <Link to="/Add Product" className="card-link">Add Product</Link>
                     </div>
                 }
 

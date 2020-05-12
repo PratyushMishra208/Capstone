@@ -34,7 +34,8 @@ export default function reducer(state = iSTATE, action) {
       case "SIGN_OUT":
         return{
           ...state,
-          UserId:""
+          UserId:"",
+          Message:'Sucessfully SignOut..'
         }
       
         case "PRODUCT_DETAIL_SUCCESS":{

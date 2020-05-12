@@ -142,7 +142,7 @@ class Form extends Component {
                     <div>
                         {this.props.Message !== "" ?
                             <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                                <strong>Operation Completed</strong> {this.props.Message}
+                                <strong>Done..</strong> {this.props.Message}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -153,7 +153,7 @@ class Form extends Component {
 
                         <div className="row mt-5 mb-2">
                             <div className="offset-lg-3  offset-md-3 col-md-6 col-lg-6 col-sm-10 text-center  signup-text">
-                                Add Product
+                                Update Product
                          </div>
                         </div>
                         <div className="row ">

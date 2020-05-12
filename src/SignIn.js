@@ -18,7 +18,7 @@ function SignIn(props) {
         <div className="container ">
             {props.Message !== "" ?
                             <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                                <strong>Welcome</strong> {props.Message}
+                                <strong>Done</strong> {props.Message}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>

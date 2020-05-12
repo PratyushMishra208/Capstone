@@ -110,6 +110,7 @@ export function GetProductForUpdateSuccess(value){
 
 //      }
 //  }
+
  export function GetMessage(value){
      console.log(value)
     return{
