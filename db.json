@@ -6,7 +6,7 @@
       "quantity": "10",
       "price": "200",
       "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-      "views": 1
+      "views": 2
     },
     {
       "id": 7,
@@ -29,7 +29,8 @@
       "title": "Stawberry",
       "quantity": 5,
       "price": 600,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
+      "views": 1
     },
     {
       "id": 10,

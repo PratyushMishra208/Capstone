@@ -9,12 +9,15 @@ import SignIn from './SignIn'
 import ProductDetail from './ProductDetail'
 import AddProduct from './AddProduct'
 import UpdateProduct from './updateProduct'
+import Footer from './Footer'
+import Aboutus from './About'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import About from './About';
  
 
 
@@ -44,8 +47,12 @@ function App() {
         <Route path="/ProductDetail">
           <ProductDetail />
         </Route>
+        <Route path="/AboutUs">
+          <About />
+        </Route>
         
       </Switch>
+      <Footer />
     </Router>
     
   );
