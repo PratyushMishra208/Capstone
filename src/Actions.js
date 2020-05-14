@@ -118,3 +118,10 @@ export function GetProductForUpdateSuccess(value){
         
     }
 }
+
+export function CountViews(value){
+    return{
+        type:"COUNT_VIEWS",
+        payload:value
+    }
+}
