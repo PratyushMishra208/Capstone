@@ -1,5 +1,5 @@
-import { takeEvery, call, put, takeLatest } from 'redux-saga/effects'
-import axios from 'axios'
+import { takeEvery, call, put } from 'redux-saga/effects'
+import axios from 'axios';
 import uuid4 from 'uuid4';
 import { getProductSuccess, 
      UserSignInSuccess,
@@ -8,7 +8,7 @@ import { getProductSuccess,
      GetProductForUpdateSuccess,
      GetMessage
  } from '../Actions'
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 const fetchProductList = async () => {
     const response = await axios.get("http://localhost:4000/products");
@@ -22,10 +22,13 @@ const fetchProductList = async () => {
 const createUser = async (payload) => {
     const insertObject = {
         "id": uuid4(),
-        "username": payload[0],
-        "email": payload[1],
-        "password": payload[2],
-        "comfirmPassword": payload[3]
+        "firstname": payload[0],
+        "lastname":payload[1],
+        "email": payload[2],
+        "password": payload[3],
+        "location": payload[4],
+        "mobilenumber": payload[5]
+        // "comfirmPassword": payload[4]
     }
     const response = await axios.post("http://localhost:4000/UserData", insertObject);
     const data = await response.data
@@ -36,6 +39,7 @@ const SignIn = async (payload) => {
     console.log(payload[0])
     const response = await axios.get("http://localhost:4000/UserData?email=" + payload[0]);
     const data = await response.data
+    console.log(data)
     if (data.length > 0) {
         console.log(data[0].email, data[0].password)
         if (payload[0] === data[0].email && payload[1] === data[0].password) {
@@ -116,6 +120,7 @@ function* UserCreate({ payload }) {
 }
 
 function* UserSignIn({ payload }) {
+    console.log(payload)
     const UserID = yield call(SignIn, payload)
     if (UserID === "Password_Error" || UserID === "NO_User") {
         yield put(SignErrorMsg(UserID))

@@ -84,6 +84,39 @@
       "email": "rohankumar.mrtt@gmail.com",
       "password": "123456",
       "comfirmPassword": "123456"
+    },
+    {
+      "id": "4ced80e2-5b32-4839-b612-d30897189026",
+      "firstname": "Sonu",
+      "lastname": "MISHRA",
+      "email": "sonu@gmail.com",
+      "password": "123456",
+      "comfirmPassword": "123456"
+    },
+    {
+      "id": "1c65dbb6-8db6-4ca7-b27e-48b004c85170",
+      "firstname": "Pinki",
+      "lastname": "kumari",
+      "email": "pinki@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "5824e6ab-7bd4-4e1c-9900-1b5cc83f2c07",
+      "firstname": "nitin@gmail.com",
+      "lastname": "123456",
+      "email": "Nitin",
+      "password": "kumar",
+      "location": "meerut",
+      "mobilenumber": "1234567890"
+    },
+    {
+      "id": "14388564-97ee-472c-8887-896ddddd8e6c",
+      "firstname": "ram ",
+      "lastname": "singh",
+      "email": "ram@gmail.com",
+      "password": "123456",
+      "location": "meerut",
+      "mobilenumber": "123456"
     }
   ]
 }
