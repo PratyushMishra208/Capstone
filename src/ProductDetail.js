@@ -1,17 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import {CountViews} from "./Actions"
 
 function ProductDetail(props) {
     const { singleProductDetail } = props
+     
+    const ViewCount=(ProductDetailArray)=>{
+    props.CountViews(ProductDetailArray)
+
+    }
+
     return (
-
         <div>
-
             {console.log(singleProductDetail)}
             {/* {console.log(singleProductDetail[0].)} */}
             {singleProductDetail[0] !== undefined ?
                 <div className="row ">
+                    {ViewCount(singleProductDetail[0])}
                     <div className="offset-lg-3  offset-md-3 col-md-6 col-lg-6 col-sm-10 ">
                         <div className="card" style={{ width: "28rem", marginTop: 30 }}>
                             <div className="card-body">
@@ -20,6 +26,7 @@ function ProductDetail(props) {
                                 <p className="card-text">{singleProductDetail[0].description}</p>
                                 <p className="card-text"><strong>Price : </strong>{singleProductDetail[0].price}</p>
                                 <p className="card-text"><strong>Available Quantity : </strong>{singleProductDetail[0].quantity}</p>
+                                <p className="card-text"><strong>No. of Views : </strong>{singleProductDetail[0].views+1}</p>
                                 <Link to="/ProductList" className="card-link">Back</Link>
                                 <Link to="/Add Product" className="card-link">Add Product</Link>
                             </div>
@@ -45,4 +52,4 @@ const mapStateToProps = (state) => {
         singleProductDetail: state.singleProductDetail
     }
 }
-export default connect(mapStateToProps, null)(ProductDetail)
+export default connect(mapStateToProps, {CountViews})(ProductDetail)

@@ -3,10 +3,13 @@ import './myCss.css'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {UserSignIn} from './Actions'
+import{ useHistory} from 'react-router-dom'
+
 function SignIn(props) {
     const [email,   setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    let History = useHistory()
+    const {UserId}=props
     const submitHandler = (e) => {
         e.preventDefault()
         console.log(email, password)
@@ -14,6 +17,13 @@ function SignIn(props) {
         setEmail('')
         setPassword('')
     }
+    useEffect(()=>{
+        if(UserId!==""){
+            History.push("/")
+        }
+
+    },[UserId])
+
     return (
         <div className="container ">
             {props.Message !== "" ?
@@ -71,8 +81,9 @@ function SignIn(props) {
 }
 const mapStateToProps = (state) => {
     return {
-        Message: state.Message
-
+        Message: state.Message,
+        UserId:state.UserId
+        
     }
 }
 export default connect(mapStateToProps,{UserSignIn})(SignIn)

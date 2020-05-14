@@ -1,25 +1,28 @@
 {
   "products": [
     {
+      "id": 4,
       "title": "Apricot",
-      "quantity": "200000",
-      "price": "10",
+      "quantity": "10",
+      "price": "200",
       "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-      "id": 4
+      "views": 1
     },
     {
       "id": 7,
       "title": "Graps",
       "quantity": 9,
       "price": 180,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
+      "views": 1
     },
     {
       "id": 8,
       "title": "Guava",
       "quantity": 3,
       "price": 270,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
+      "views": 5
     },
     {
       "id": 9,
@@ -33,21 +36,8 @@
       "title": "Lemon",
       "quantity": 4,
       "price": 100,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
-    },
-    {
-      "id": 11,
-      "title": "Jackfruit",
-      "quantity": 30,
-      "price": 170,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus"
-    },
-    {
-      "title": "mango",
-      "quantity": "19",
-      "price": "170000",
-      "description": "24Suppose we have a UI to fetch some user data from a remote server when a button is clicked. (For brevity, we'll just show the action triggering code.)",
-      "id": "632f0768-1af5-4ec4-86da-a62af6cb6586"
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
+      "views": 4
     }
   ],
   "UserData": [
@@ -86,6 +76,7 @@
       "comfirmPassword": "123456"
     },
     {
+
       "id": "4ced80e2-5b32-4839-b612-d30897189026",
       "firstname": "Sonu",
       "lastname": "MISHRA",

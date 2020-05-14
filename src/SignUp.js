@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import './myCss.css'
 import{UserSignUp} from './Actions'
 import { connect } from 'react-redux'
+import {
+    useHistory
+  } from "react-router-dom";
 
 function SignUp(props) {
     const [firstname, setFirstname] = useState('')
@@ -11,6 +14,7 @@ function SignUp(props) {
     const [location, setLocation] = useState('')
     const [mobilenumber, setMobilenumber] = useState('')
     const [passwordError, setPasswordError] = useState('')
+    let History = useHistory()
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -26,6 +30,9 @@ function SignUp(props) {
             setLocation('')
             setMobilenumber('')
            
+
+            SetconfirmPassword('')
+           History.push("/SignIn")
             //dispatch the action
 
         }

@@ -36,7 +36,7 @@ const createUser = async (payload) => {
 }
 
 const SignIn = async (payload) => {
-    console.log(payload[0])
+    // console.log(payload[0])
     const response = await axios.get("http://localhost:4000/UserData?email=" + payload[0]);
     const data = await response.data
     console.log(data)
@@ -55,14 +55,14 @@ const SignIn = async (payload) => {
 }
 
 const SearchResultFunc = async (payload) => {
-    console.log(payload)
+    // console.log(payload)
     const response = await axios.get("http://localhost:4000/products?title=" + payload);
     const data = await response.data
     if (data.length <= 0) {
         const response = await axios.get("http://localhost:4000/products?description=" + payload);
-        console.log(response)
+        // console.log(response)
         const data = await response.data
-        console.log(data)
+        // console.log(data)
         return data
     }
     else {
@@ -88,7 +88,7 @@ const ProductDetailfunc=async(payload)=>{
 }
 
 const ProductUpdateFunc = async(payload)=>{
-    console.log(payload[0])
+    // console.log(payload[0])
     const insertObject = {
         // "id": payload[0],
         "title": payload[1],
@@ -101,6 +101,37 @@ const ProductUpdateFunc = async(payload)=>{
     return response
 }
 
+const CountViewFunc=async(payload)=>{
+    // console.log(payload)
+    let insertObject={}
+    if(payload.views===undefined){
+         insertObject = {
+            "id": payload.id,
+            "title": payload.title,
+            "quantity": payload.quantity,
+            "price": payload.price,
+            "description": payload.description,
+            "views":1
+        }
+    }
+    else{
+       const ProductViews=payload.views+1
+         insertObject=
+        {
+            "id": payload.id,
+            "title": payload.title,
+            "quantity": payload.quantity,
+            "price": payload.price,
+            "description": payload.description,
+            "views":ProductViews
+        }
+       
+    }
+    // console.log(insertObject)
+    const response = await  axios.put("http://localhost:4000/products/"+payload.id, insertObject);
+    // console.log(response)
+}
+
 
 
 function* getAllProduct() {
@@ -110,8 +141,8 @@ function* getAllProduct() {
 
 function* UserCreate({ payload }) {
     const response=yield call(createUser, payload)
-    console.log(response)
-    if(response.status===200){
+    // console.log(response)
+    if(response.status===201){
         yield put (GetMessage("Your Account is Successful Update"))
     }
     else{
@@ -136,7 +167,7 @@ function* UserSignIn({ payload }) {
 
 function* SearchQuery({ payload }) {
     const SearchResult = yield call(SearchResultFunc, payload)
-    console.log(SearchResult)
+    // console.log(SearchResult)
     yield put(getProductSuccess(SearchResult))
 }
 
@@ -147,7 +178,7 @@ function* DeleteProduct({payload}){
 
 function* ProductDetail({payload}){
     const ProductDetailResult=yield call(ProductDetailfunc,payload)
-    console.log(ProductDetailResult)
+    // console.log(ProductDetailResult)
     yield put(ProductDetailSuccess(ProductDetailResult))
 }
 
@@ -162,9 +193,14 @@ function* ProductUpdate({payload}){
 }
 
 function* GetProductForUpdate({payload}){
-    console.log(payload)
+    // console.log(payload)
     const productDetial=yield call(ProductDetailfunc,payload)
     yield put(GetProductForUpdateSuccess(productDetial))
+}
+
+function* CountView({payload}){
+    yield call(CountViewFunc,payload)
+
 }
 
 export const watchersaga = [
@@ -176,4 +212,5 @@ export const watchersaga = [
     takeEvery("PRODUCT_DETAIL",ProductDetail),
     takeEvery("PRODUCT_UPDATE", ProductUpdate),
     takeEvery("GET_PRODUCT_FOR_UPDATE",GetProductForUpdate),
+    takeEvery("COUNT_VIEWS",CountView)
 ]
