@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './myCss.css'
 import{UserSignUp} from './Actions'
 import { connect } from 'react-redux'
@@ -7,26 +7,32 @@ import {
   } from "react-router-dom";
 
 function SignUp(props) {
-    const [username, setUsername] = useState('')
+    const [firstname, setFirstname] = useState('')
+    const [lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [confirmPassword, SetconfirmPassword] = useState('')
+    const [location, setLocation] = useState('')
+    const [mobilenumber, setMobilenumber] = useState('')
     const [passwordError, setPasswordError] = useState('')
     let History = useHistory()
 
     const handleSubmit = event => {
         event.preventDefault();
         console.log('running')
-        console.log(username, email, password, confirmPassword)
-        if (password === confirmPassword) {
-            props.UserSignUp([username,email,password,confirmPassword])
+        console.log(firstname, lastname, email, password, location, mobilenumber )
+        if (password === password) {
+            props.UserSignUp([firstname, lastname,email,password,location,mobilenumber])
             setPasswordError('')
-            setUsername('')
+            setFirstname('')
+            setLastname('')
             setEmail('')
             setPassword('')
+            setLocation('')
+            setMobilenumber('')
+           
+
             SetconfirmPassword('')
            History.push("/SignIn")
-
             //dispatch the action
 
         }
@@ -39,7 +45,7 @@ function SignUp(props) {
         <div className="container ">
              {props.Message !== "" ?
                             <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                                <strong>Operation Completed</strong> {props.Message}
+                                <strong></strong> {props.Message}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -56,19 +62,58 @@ function SignUp(props) {
                 <div className="offset-lg-3  offset-md-3 col-md-6 col-lg-6 col-sm-10 ">
                     <form onSubmit={handleSubmit}>
                         <div class="form-group">
-                            <label for="exampleInputUsername">UserName</label>
+                            <label for="exampleInputFirstname">First Name</label>
                             <input
                                 type="text"
                                 class="form-control"
-                                id="exampleInputUsername"
-                                name="username"
-                                value={username}
+                                id="exampleInputFirstname"
+                                name="firstname"
+                                value={firstname}
                                 required
-                                onChange={event => setUsername(event.target.value)}
+                                onChange={event => setFirstname(event.target.value)}
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputLaststname">Last Name</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="exampleInputLastname"
+                                name="lastname"
+                                value={lastname}
+                                required
+                                onChange={event => setLastname(event.target.value)}
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputLocation">Location</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="exampleInputLocation"
+                                name="location"
+                                value={location}
+                                required
+                                onChange={event => setLocation(event.target.value)}
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputMobilenumber">Mobile Number</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="exampleInputMobilenumber"
+                                name="mobilenumber"
+                                value={mobilenumber}
+                                required
+                                onChange={event => setMobilenumber(event.target.value)}
                             />
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
+                            <label for="exampleInputEmail1">Email ID</label>
                             <input
                                 type="email"
                                 class="form-control"
@@ -81,21 +126,21 @@ function SignUp(props) {
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
-                            <label for="Password1">Password</label>
+                            <label for="Password">Password</label>
                             <input
                                 type="password"
                                 class="form-control"
-                                id="Password1"
+                                id="Password"
                                 required
                                 value={password}
                                 name="password"
                                 onChange={e => setPassword(e.target.value)}
                             />
-
+                                <p className="errorText">{passwordError}</p>
                         </div>
 
-                        <div class="form-group">
-                            <label for="confirmPassword">Password</label>
+                        {/* <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
                             <input
                                 type="password"
                                 class="form-control"
@@ -107,8 +152,8 @@ function SignUp(props) {
                             />
                             <p className="errorText">{passwordError}</p>
 
-                        </div>
-                        <div class="form-group form-check">
+                        </div> */}
+                        {/* <div class="form-group form-check">
                             <input
                                 type="checkbox"
                                 class="form-check-input"
@@ -117,7 +162,7 @@ function SignUp(props) {
                                 name="checkBox" />
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             <small id="emailHelp" class="form-text text-muted">By Check this, you accepts all terms and conditions.</small>
-                        </div>
+                        </div> */}
                         <button type="submit" class="btn btn-primary mt-2 mb-5">Create a Account</button>
                     </form>
                 </div>

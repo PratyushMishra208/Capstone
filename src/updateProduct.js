@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import axios from 'axios';
-import uuid4 from 'uuid4';
+// import axios from 'axios';
+// import uuid4 from 'uuid4';
 // import axios from 'axios';
 import {
     Link,
@@ -204,7 +204,7 @@ class Form extends Component {
                                             />
                                             <p className="errorText">{this.state.DescriptionError}</p>
                                         </div>
-                                        <button type="submit" class="btn btn-primary mt-2 mb-5">Add </button>
+                                        <button type="submit" class="btn btn-primary mt-2 mb-5">Update </button>
                                     </form>
                                     <hr />
                                 </div>
