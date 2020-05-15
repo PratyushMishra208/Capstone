@@ -94,7 +94,9 @@ const ProductUpdateFunc = async(payload)=>{
         "title": payload[1],
         "quantity": payload[2],
         "price": payload[3],
-        "description": payload[4]
+        "description": payload[4],
+        "manufacturer":payload[5]
+
     }
     const response = await  axios.put("http://localhost:4000/products/"+payload[0], insertObject);
     
@@ -111,6 +113,7 @@ const CountViewFunc=async(payload)=>{
             "quantity": payload.quantity,
             "price": payload.price,
             "description": payload.description,
+            "manufacturer":payload.manufacturer,
             "views":1
         }
     }
@@ -123,6 +126,7 @@ const CountViewFunc=async(payload)=>{
             "quantity": payload.quantity,
             "price": payload.price,
             "description": payload.description,
+            "manufacturer":payload.manufacturer,
             "views":ProductViews
         }
        
@@ -143,7 +147,7 @@ function* UserCreate({ payload }) {
     const response=yield call(createUser, payload)
     // console.log(response)
     if(response.status===201){
-        yield put (GetMessage("Your Account is Successful Update"))
+        yield put (GetMessage("Your Account is Successful Created"))
     }
     else{
         yield put (GetMessage("Your Account  is not Created ! Please Try again"))
@@ -184,7 +188,7 @@ function* ProductDetail({payload}){
 
 function* ProductUpdate({payload}){
     const response=yield call(ProductUpdateFunc,payload)
-    if(response.status===201){
+    if(response.status===200||response.status===201){
       yield put (GetMessage("Your Product is Successful Update"))
     }
     else{

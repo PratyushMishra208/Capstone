@@ -24,6 +24,7 @@ function ProductDetail(props) {
                                 <h5 className="card-title">{singleProductDetail[0].title}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">Description</h6>
                                 <p className="card-text">{singleProductDetail[0].description}</p>
+                                 <p className="card-text"><strong>Manufacturer : </strong>{singleProductDetail[0].manufacturer}</p>
                                 <p className="card-text"><strong>Price : </strong>{singleProductDetail[0].price}</p>
                                 <p className="card-text"><strong>Available Quantity : </strong>{singleProductDetail[0].quantity}</p>
                                 <p className="card-text"><strong>No. of Views : </strong>{singleProductDetail[0].views+1}</p>

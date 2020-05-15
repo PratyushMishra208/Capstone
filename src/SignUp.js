@@ -31,7 +31,7 @@ function SignUp(props) {
             setMobilenumber('')
            
 
-            SetconfirmPassword('')
+            // SetconfirmPassword('')
            History.push("/SignIn")
             //dispatch the action
 

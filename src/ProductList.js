@@ -25,15 +25,15 @@ function ProductList(props) {
     return (
         <div className="container">
             <div className="row mt-2 mb-0 mx-3 " >
-                <div className="col-12 text-right">
-                    <h3 >PRODUCT LIST</h3> </div>
+                <div className="col-12 text-center mt-2 mb-2">
+                    <h2 >PRODUCT LIST</h2> </div>
             </div>
             <hr className="m-0" />
             <div className="row">
                 {console.log(ProductList.length)}
                 {ProductList.length < 1 ?
                     <div className="offset-lg-3  offset-md-3 col-md-6 col-lg-6 col-sm-10 text-center ">
-                        <ReactLoading type="cylon" color="#42de7cc7" width="auto" />
+                        <ReactLoading type="cylon" color="#42de7cc7" width="600px" />
                     </div>
 
                     :
@@ -42,10 +42,12 @@ function ProductList(props) {
                             <thead>
                                 <tr >
                                     <th scope="col">S.no</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Desription</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Manufacturer</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Price</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -54,7 +56,8 @@ function ProductList(props) {
                                         <tr key={index}>
                                             <th scope="row">{parseInt(index) + 1}</th>
                                             <td onClick={() => { viewProductDetail(Product.id) }}> <Link to="/ProductDetail">{Product.title}</Link></td>
-                                            <td>{(Product.description).slice(0, 100)}....</td>
+                                            <td>{(Product.description).slice(0, 50)}....</td>
+                                            <td>{Product.manufacturer}</td>
                                             <td>{Product.quantity}</td>
                                             <td>{Product.price}</td>
                                             {props.UserId.length > 5

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './myCss.css'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
@@ -19,7 +19,7 @@ function SignIn(props) {
     }
     useEffect(()=>{
         if(UserId!==""){
-            History.push("/")
+            History.push("/ProductList")
         }
 
     },[UserId])
@@ -28,7 +28,7 @@ function SignIn(props) {
         <div className="container ">
             {props.Message !== "" ?
                             <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                                <strong>Welcome</strong> {props.Message}
+                                <strong></strong> {props.Message}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>

@@ -16,11 +16,12 @@ class Form extends Component {
             price: '',
             quantity: '',
             Description: '',
-            productNameError
-                : '',
+            manufacturer:'',
+            productNameError: '',
             priceError: '',
             quantityError: '',
-            DescriptionError: ''
+            DescriptionError: '',
+            manufacturerError:''
         }
     }
     handleproductNameChange = event => {
@@ -48,15 +49,22 @@ class Form extends Component {
             DescriptionError: ""
         })
     }
+    handlemanufacturerChange = event => {
+        this.setState({
+            manufacturer: event.target.value,
+            manufacturerError: ""
+        })
+    }
 
     validate = (() => {
 
-        if (this.state.quantity.length === 0 && this.state.productName.length === 0 && this.state.price.length === 0 && this.state.Description.length <= 50) {
+        if (this.state.quantity.length === 0 && this.state.productName.length === 0 && this.state.price.length === 0 && this.state.Description.length === 0 && this.state.manufacturer.length === 0) {
             this.setState({
                 productNameError: "Product Name Required",
                 priceError: " Price Required",
                 quantityError: "Quantity Required",
-                DescriptionError: "Atleast 50 words Description"
+                DescriptionError: " Description Required",
+                manufacturerError:"Manufacturer Required"
             })
             return false
         }
@@ -73,9 +81,15 @@ class Form extends Component {
             })
             return false
         }
-        if (this.state.Description.length <= 50) {
+        if (this.state.Description.length === 0) {
             this.setState({
-                DescriptionError: "Atleast 50 words Description"
+                DescriptionError: "Description Required"
+            })
+            return false
+        }
+        if (this.state.manufacturer.length === 0) {
+            this.setState({
+                manufacturerError: " Manufacturer Required"
             })
             return false
         }
@@ -94,7 +108,8 @@ class Form extends Component {
                 "title": this.state.productName,
                 "quantity": this.state.quantity,
                 "price": this.state.price,
-                "description": this.state.Description
+                "description": this.state.Description,
+                "manufacturer":this.state.manufacturer
             };
             axios.post("http://localhost:4000/products", insertObject)
                 .then(result => {
@@ -103,7 +118,9 @@ class Form extends Component {
                 })
             this.setState({
                 productName: "", price: "",
-                quantity: "", Description: ""
+                quantity: "", Description: "",
+                manufacturer:""
+
             })
 
         }
@@ -112,7 +129,7 @@ class Form extends Component {
     }
 
     render() {
-        const { productName, price, quantity, Description } = this.state
+        const { productName, price, quantity, Description, manufacturer } = this.state
         return (
 
             <div className="container ">
@@ -184,6 +201,19 @@ class Form extends Component {
                                         />
                                         <p className="errorText">{this.state.DescriptionError}</p>
                                     </div>
+                                    <div className="form-group">
+                                        <label htmlFor="Manufacturer">Manufacturer</label>
+                                        <input className="form-control" id="Manufacturer"
+                                            type="text"
+                                            
+                                            value={manufacturer}
+                                            onChange={this.handlemanufacturerChange}
+                                            placeholder="Manufacturer"
+                                            
+                                        />
+                                        <p className="errorText">{this.state.manufacturerError}</p>
+                                    </div>
+
                                     <button type="submit" class="btn btn-primary mt-2 mb-5">Add </button>
                                 </form>
                                 <hr />

@@ -7,8 +7,9 @@ export default function About() {
             <div className="row ">
                 <div className="col-12">
                     <main role="main" class="container">
-                        <h1 className="mt-5">About Us</h1>
-                        <p className="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
+                        <h2 className="mt-5">Track Inventory on your System- </h2>
+                        <p className="lead"> Keep perfect track of how many kilograms, pounds, meters of items you have bought or sold, right on your system. When you buy and sell, the stock level in inventory management software gets automatically updated. This inventory management software helps you avoid buying excessive items that may lay waste in your inventory. This sort of good inventory management is crucial for growing a company like yours. 
+                        Just like cash flow, it can make or break your business.</p>
                     </main>
 
                 </div>

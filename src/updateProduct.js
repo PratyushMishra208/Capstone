@@ -17,11 +17,14 @@ class Form extends Component {
             price: '',
             quantity: '',
             Description: '',
+            manufacturer:'',
             productNameError
                 : '',
             priceError: '',
             quantityError: '',
-            DescriptionError: ''
+            DescriptionError: '',
+            manufacturerError:''
+
         }
     }
     handleproductNameChange = event => {
@@ -50,14 +53,22 @@ class Form extends Component {
         })
     }
 
+    handlemanufacturerChange = event => {
+        this.setState({
+            manufacturer: event.target.value,
+            manufacturerError: ""
+        })
+    }
+
     validate = (() => {
 
-        if (this.state.quantity.length === 0 && this.state.productName.length === 0 && this.state.price.length === 0 && this.state.Description.length <= 50) {
+        if (this.state.quantity.length === 0 && this.state.productName.length === 0 && this.state.price.length === 0 && this.state.Description.length === 0 && this.state.manufacturer.length === 0) {
             this.setState({
                 productNameError: "Product Name Required",
                 priceError: " Price Required",
                 quantityError: "Quantity Required",
-                DescriptionError: "Atleast 50 words Description"
+                DescriptionError: "Description Required",
+                manufacturerError: " manufacturer Required"
             })
             return false
         }
@@ -74,9 +85,16 @@ class Form extends Component {
             })
             return false
         }
-        if (this.state.Description.length <= 50) {
+        if (this.state.Description.length === 50) {
             this.setState({
-                DescriptionError: "Atleast 50 words Description"
+                DescriptionError: "Description Required"
+            })
+            return false
+        }
+
+        if (this.state.manufacturer.length === 0) {
+            this.setState({
+                manufacturerError: "Manufacturer Required"
             })
             return false
         }
@@ -89,10 +107,11 @@ class Form extends Component {
         const isvalid = this.validate()
 
         if (isvalid) {
-            this.props.ProductUpdate([this.state.id, this.state.productName, this.state.price, this.state.quantity, this.state.Description])
+            this.props.ProductUpdate([this.state.id, this.state.productName, this.state.price, this.state.quantity, this.state.Description, this.state.manufacturer])
             this.setState({
                 productName: "", price: "",
                 quantity: "", Description: "",
+                manufacturer:"",
                 id: ""
             })
 
@@ -109,7 +128,8 @@ class Form extends Component {
                     productName: this.props.productDetailForUpdate[0].title,
                     price: this.props.productDetailForUpdate[0].price,
                     quantity: this.props.productDetailForUpdate[0].quantity,
-                    Description: this.props.productDetailForUpdate[0].description,
+                    manufacturer: this.props.productDetailForUpdate[0].manufacturer,
+                    
                 })
             }
         }, 1000)
@@ -119,7 +139,7 @@ class Form extends Component {
 
     }
     render() {
-        const { productName, price, quantity, Description, id } = this.state
+        const { productName, price, quantity, Description,manufacturer, id } = this.state
         return (
 
             <div className="container ">
@@ -142,7 +162,7 @@ class Form extends Component {
                     <div>
                         {this.props.Message !== "" ?
                             <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
-                                <strong>Operation Completed</strong> {this.props.Message}
+                                <strong></strong> {this.props.Message}
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -153,7 +173,7 @@ class Form extends Component {
 
                         <div className="row mt-5 mb-2">
                             <div className="offset-lg-3  offset-md-3 col-md-6 col-lg-6 col-sm-10 text-center  signup-text">
-                                Add Product
+                                Update Product
                          </div>
                         </div>
                         <div className="row ">
@@ -204,6 +224,20 @@ class Form extends Component {
                                             />
                                             <p className="errorText">{this.state.DescriptionError}</p>
                                         </div>
+                                         
+                                        <div className="form-group">
+                                        <label htmlFor="Manufacturer">Manufacturer</label>
+                                        <input className="form-control" id="Manufacturer"
+                                            type="text"
+                                            
+                                            value={manufacturer}
+                                            onChange={this.handlemanufacturerChange}
+                                            placeholder="Manufacturer"
+                                            
+                                        />
+                                        <p className="errorText">{this.state.manufacturerError}</p>
+                                    </div>
+
                                         <button type="submit" class="btn btn-primary mt-2 mb-5">Update </button>
                                     </form>
                                     <hr />

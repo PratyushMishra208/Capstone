@@ -1,106 +1,16 @@
 {
   "products": [
     {
-      "id": 4,
-      "title": "Apricot",
-      "quantity": "10",
-      "price": "200",
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-      "views": 2
-    },
-    {
-      "id": 7,
+      "id": "85a5143b-0dab-416c-9c43-f7c9fa7c4fc8",
       "title": "Graps",
-      "quantity": 9,
-      "price": 180,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
+      "quantity": "10",
+      "price": "100",
+      "description": "sweet",
+      "manufacturer": "Meerut",
       "views": 1
-    },
-    {
-      "id": 8,
-      "title": "Guava",
-      "quantity": 3,
-      "price": 270,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-      "views": 5
-    },
-    {
-      "id": 9,
-      "title": "Stawberry",
-      "quantity": 5,
-      "price": 600,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-      "views": 1
-    },
-    {
-      "id": 10,
-      "title": "Lemon",
-      "quantity": 4,
-      "price": 100,
-      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-      "views": 4
     }
   ],
   "UserData": [
-    {
-      "username": "Rahul",
-      "email": "rahul@gamil.com",
-      "address": "7/1 nand puri kanker khera Meerut Cantt",
-      "password": "123456"
-    },
-    {
-      "id": "929dddad-b4b5-4daa-bfb0-9892d6ca3911",
-      "username": "rahul",
-      "email": "abc@gamil.com",
-      "password": "123456",
-      "comfirmPassword": "123456"
-    },
-    {
-      "id": "8824c6e7-2aab-4146-ba19-072ef8bd07de",
-      "username": "kavya",
-      "email": "123@gmail.com",
-      "password": "123456",
-      "comfirmPassword": "123456"
-    },
-    {
-      "id": "b9039ddf-a082-4102-91f9-451ecc622666",
-      "username": "karan",
-      "email": "karanclt_1@gmail.com",
-      "password": "123456",
-      "comfirmPassword": "123456"
-    },
-    {
-      "id": "e1f8c441-a620-4515-afc8-7c67e3225c27",
-      "username": "rahul",
-      "email": "rohankumar.mrtt@gmail.com",
-      "password": "123456",
-      "comfirmPassword": "123456"
-    },
-    {
-
-      "id": "4ced80e2-5b32-4839-b612-d30897189026",
-      "firstname": "Sonu",
-      "lastname": "MISHRA",
-      "email": "sonu@gmail.com",
-      "password": "123456",
-      "comfirmPassword": "123456"
-    },
-    {
-      "id": "1c65dbb6-8db6-4ca7-b27e-48b004c85170",
-      "firstname": "Pinki",
-      "lastname": "kumari",
-      "email": "pinki@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "5824e6ab-7bd4-4e1c-9900-1b5cc83f2c07",
-      "firstname": "nitin@gmail.com",
-      "lastname": "123456",
-      "email": "Nitin",
-      "password": "kumar",
-      "location": "meerut",
-      "mobilenumber": "1234567890"
-    },
     {
       "id": "14388564-97ee-472c-8887-896ddddd8e6c",
       "firstname": "ram ",
@@ -108,7 +18,16 @@
       "email": "ram@gmail.com",
       "password": "123456",
       "location": "meerut",
-      "mobilenumber": "123456"
+      "mobilenumber": "123456721"
+    },
+    {
+      "id": "179c56c5-8f26-492b-bdf7-b200394e1de3",
+      "firstname": "Pratyush",
+      "lastname": "MISHRA",
+      "email": "pratyush16@gmail.com",
+      "password": "123456",
+      "location": "meerut",
+      "mobilenumber": "1234567890"
     }
   ]
 }
