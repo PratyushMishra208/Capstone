@@ -22,7 +22,7 @@ function SignIn(props) {
             History.push("/ProductList")
         }
 
-    },[UserId])
+    },[UserId,History])
 
     return (
         <div className="container ">

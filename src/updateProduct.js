@@ -140,7 +140,8 @@ class Form extends Component {
 
     }
     render() {
-        const { productName, price, quantity, Description, manufacturer, id } = this.state
+        const { productName, price, quantity, Description,manufacturer } = this.state
+
         return (
 
             <div className="container ">

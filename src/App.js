@@ -1,16 +1,16 @@
-import React from 'react';
+import React,{lazy,Suspense} from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Header from './Header'
 import Home from './Home';
-import ProductList from './ProductList'
+// import ProductList from './ProductList'
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 import ProductDetail from './ProductDetail'
 import AddProduct from './AddProduct'
 import UpdateProduct from './updateProduct'
 import Footer from './Footer'
-import AboutUs from './About'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +18,7 @@ import {
   
 } from "react-router-dom";
 import About from './About';
- 
+ const ProductList =lazy(()=>import('./ProductList'))
 
 
 function App() {
@@ -30,7 +30,10 @@ function App() {
           <Home />
         </Route>
         <Route path="/ProductList">
-          <ProductList />
+          <Suspense fallback={<div>Please Wait...! we Processed your request</div>}>
+             <ProductList />
+          </Suspense>
+         
         </Route>
         <Route path="/Add Product">
           <AddProduct />
