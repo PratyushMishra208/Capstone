@@ -2,11 +2,83 @@
   "products": [
     {
       "title": "Graps",
-      "quantity": "1000",
-      "price": "10",
-      "description": "",
+      "quantity": "10",
+      "price": "1000",
+      "description": "sweet",
       "manufacturer": "Meerut",
       "id": "85a5143b-0dab-416c-9c43-f7c9fa7c4fc8"
+    },
+    {
+      "id": "475ed759-1d0e-49b3-83a9-89bafee3a639",
+      "title": "Mango",
+      "quantity": "10",
+      "price": "1000",
+      "description": "sweet",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "4606dfd8-88da-444d-b609-26cb2033bbbc",
+      "title": "Apricot",
+      "quantity": "10",
+      "price": "2000",
+      "description": "sweet ",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "c6bf2a5a-d513-402a-b36f-75696e268e7d",
+      "title": "PineApple",
+      "quantity": "1",
+      "price": "100",
+      "description": "sweet ",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "e481c9c7-f27c-477a-b598-047d9cd00fe9",
+      "title": "Blackberry",
+      "quantity": "10",
+      "price": "300",
+      "description": "sweet ",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "2236ff02-a3d7-47fa-8a64-b3134b3e578c",
+      "title": "Banana",
+      "quantity": "2",
+      "price": "60",
+      "description": "sweet",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "2ab3d336-c2b4-4c29-858d-3ab3204ae1e2",
+      "title": "Papaya",
+      "quantity": "10",
+      "price": "1000",
+      "description": "sweet",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "b0fda131-f777-4fef-b446-aad4b41406a6",
+      "title": "Chiku",
+      "quantity": "5",
+      "price": "500",
+      "description": "sweet",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "c909e189-f4f7-4d49-8900-da9217c56118",
+      "title": "Leamon",
+      "quantity": "2",
+      "price": "20",
+      "description": "sweet",
+      "manufacturer": "Meerut"
+    },
+    {
+      "id": "2dc757c4-6ad2-4b2e-b8ff-f96b510c961f",
+      "title": "Guava",
+      "quantity": "1",
+      "price": "10",
+      "description": "sweet",
+      "manufacturer": "Meerut"
     }
   ],
   "UserData": [
