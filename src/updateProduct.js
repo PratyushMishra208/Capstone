@@ -85,7 +85,7 @@ class Form extends Component {
             })
             return false
         }
-        if (this.state.Description.length === 50) {
+        if (this.state.Description.length === 0) {
             this.setState({
                 DescriptionError: "Description Required"
             })
@@ -128,6 +128,7 @@ class Form extends Component {
                     productName: this.props.productDetailForUpdate[0].title,
                     price: this.props.productDetailForUpdate[0].price,
                     quantity: this.props.productDetailForUpdate[0].quantity,
+                    Description: this.props.productDetailForUpdate[0].Description,
                     manufacturer: this.props.productDetailForUpdate[0].manufacturer,
                     
                 })
@@ -140,6 +141,7 @@ class Form extends Component {
     }
     render() {
         const { productName, price, quantity, Description,manufacturer } = this.state
+
         return (
 
             <div className="container ">
@@ -186,7 +188,7 @@ class Form extends Component {
                                             <input type="text" class="form-control" id="ProductName" aria-describedby="name"
                                                 value={productName}
                                                 onChange={this.handleproductNameChange}
-                                                placeholder="Enter the product Name"
+                                                placeholder="Enter Product Name"
                                             />
                                             <p className="errorText">{this.state.productNameError}</p>
                                         </div>
@@ -219,7 +221,7 @@ class Form extends Component {
 
                                                 value={Description}
                                                 onChange={this.handleDescriptionChange}
-                                                placeholder="Description"
+                                                placeholder="Enter Description"
 
                                             />
                                             <p className="errorText">{this.state.DescriptionError}</p>
@@ -232,7 +234,7 @@ class Form extends Component {
                                             
                                             value={manufacturer}
                                             onChange={this.handlemanufacturerChange}
-                                            placeholder="Manufacturer"
+                                            placeholder="Enter Manufacturer"
                                             
                                         />
                                         <p className="errorText">{this.state.manufacturerError}</p>

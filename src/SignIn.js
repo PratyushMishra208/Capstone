@@ -38,7 +38,7 @@ function SignIn(props) {
                         }
             <div className="row mt-5 mb-2">
                 <div className="offset-lg-3  offset-md-3 col-md-6 col-lg-6 col-sm-10 text-center  signup-text">
-                    Log In
+                     Login
                </div>
             </div>
             <div className="row ">
@@ -67,11 +67,11 @@ function SignIn(props) {
                                 onChange={(e) => { setPassword(e.target.value) }}
                             />
                         </div>
-                        <button type="submit" class="btn btn-primary mt-2 mb-5">LogIn</button>
+                        <button type="submit" class="btn btn-primary mt-2 mb-5">Login</button>
                     </form>
                     <hr />
                     <div style={{ textAlign: "right" }}>
-                        <Link to="/SignUp" >Create a Account</Link>
+                        <Link to="/SignUp" >Registration</Link>
                     </div>
                 </div>
 

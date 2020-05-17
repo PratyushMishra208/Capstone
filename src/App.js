@@ -10,6 +10,7 @@ import ProductDetail from './ProductDetail'
 import AddProduct from './AddProduct'
 import UpdateProduct from './updateProduct'
 import Footer from './Footer'
+
 import {
   BrowserRouter as Router,
   Switch,

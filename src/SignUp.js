@@ -50,7 +50,7 @@ function SignUp(props) {
                         }
             <div className="row mt-5 mb-2">
                 <div className="offset-lg-3  offset-md-3 col-md-6 col-lg-6 col-sm-10 text-center  signup-text">
-                    Create a Account
+                 Capstone Account
                </div>
             </div>
             <div className="row ">
@@ -158,7 +158,7 @@ function SignUp(props) {
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                             <small id="emailHelp" class="form-text text-muted">By Check this, you accepts all terms and conditions.</small>
                         </div> */}
-                        <button type="submit" class="btn btn-primary mt-2 mb-5">Create a Account</button>
+                        <button type="submit" class="btn btn-primary mt-2 mb-5">Create Capstone Account</button>
                     </form>
                 </div>
             </div>
