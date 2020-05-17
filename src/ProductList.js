@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, {  useEffect } from 'react'
 import { connect } from 'react-redux'
 import { getAllProducts, DeleteProduct, ProductDetail, GetProductForUpdate } from './Actions';
 import ReactLoading from "react-loading";
@@ -20,7 +20,7 @@ function ProductList(props) {
     const { getAllProducts, ProductList } = props
     useEffect(() => {
         getAllProducts()
-    }, [])
+    }, [getAllProducts])
 
     return (
         <div className="container">

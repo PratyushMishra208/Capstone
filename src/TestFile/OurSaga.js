@@ -31,7 +31,7 @@ const createUser = async (payload) => {
         // "comfirmPassword": payload[4]
     }
     const response = await axios.post("http://localhost:4000/UserData", insertObject);
-    const data = await response.data
+     await response.data
     return response
 }
 
@@ -132,7 +132,7 @@ const CountViewFunc=async(payload)=>{
        
     }
     // console.log(insertObject)
-    const response = await  axios.put("http://localhost:4000/products/"+payload.id, insertObject);
+     await  axios.put("http://localhost:4000/products/"+payload.id, insertObject);
     // console.log(response)
 }
 

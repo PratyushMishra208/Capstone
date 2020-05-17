@@ -20,7 +20,7 @@ function SignUp(props) {
         event.preventDefault();
         console.log('running')
         console.log(firstname, lastname, email, password, location, mobilenumber )
-        if (password === password) {
+        
             props.UserSignUp([firstname, lastname,email,password,location,mobilenumber])
             setPasswordError('')
             setFirstname('')
@@ -34,11 +34,6 @@ function SignUp(props) {
             // SetconfirmPassword('')
            History.push("/SignIn")
             //dispatch the action
-
-        }
-        else {
-            setPasswordError('Your password is not match')
-        }
     }
 
     return (
