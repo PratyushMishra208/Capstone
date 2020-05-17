@@ -1,13 +1,12 @@
 {
   "products": [
     {
-      "id": "85a5143b-0dab-416c-9c43-f7c9fa7c4fc8",
       "title": "Graps",
-      "quantity": "10",
-      "price": "100",
-      "description": "sweet",
+      "quantity": "1000",
+      "price": "10",
+      "description": "",
       "manufacturer": "Meerut",
-      "views": 1
+      "id": "85a5143b-0dab-416c-9c43-f7c9fa7c4fc8"
     }
   ],
   "UserData": [
