@@ -107,7 +107,7 @@ class Form extends Component {
         const isvalid = this.validate()
 
         if (isvalid) {
-            this.props.ProductUpdate([this.state.id, this.state.productName, this.state.price, this.state.quantity, this.state.Description, this.state.manufacturer])
+            this.props.ProductUpdate([this.state.id, this.state.productName, this.state.quantity, this.state.price, this.state.Description, this.state.manufacturer])
             this.setState({
                 productName: "", price: "",
                 quantity: "", Description: "",
@@ -128,7 +128,7 @@ class Form extends Component {
                     productName: this.props.productDetailForUpdate[0].title,
                     price: this.props.productDetailForUpdate[0].price,
                     quantity: this.props.productDetailForUpdate[0].quantity,
-                    Description: this.props.productDetailForUpdate[0].Description,
+                    Description: this.props.productDetailForUpdate[0].description,
                     manufacturer: this.props.productDetailForUpdate[0].manufacturer,
                     
                 })
@@ -140,7 +140,7 @@ class Form extends Component {
 
     }
     render() {
-        const { productName, price, quantity, Description,manufacturer } = this.state
+        const { productName, price, quantity, Description, manufacturer } = this.state
 
         return (
 

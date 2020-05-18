@@ -20,9 +20,10 @@ import {
 import About from './About';
  const ProductList =lazy(()=>import('./ProductList'))
 
-
-function App() {
+ 
+ function App() {
   return (
+    
     <Router>
       <Header />
       <Switch>
@@ -30,7 +31,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/ProductList">
-          <Suspense fallback={<div>Please Wait...! we Processed your request</div>}>
+          <Suspense fallback={<div>Please Wait...! We Processed your request</div>}>
              <ProductList />
           </Suspense>
          
@@ -57,8 +58,11 @@ function App() {
       </Switch>
       <Footer />
     </Router>
+  
     
   );
 }
+
+
 
 export default App;

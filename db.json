@@ -1,12 +1,13 @@
 {
   "products": [
     {
+      "id": "85a5143b-0dab-416c-9c43-f7c9fa7c4fc8",
       "title": "Graps",
       "quantity": "10",
-      "price": "1000",
+      "price": "100",
       "description": "sweet",
       "manufacturer": "Meerut",
-      "id": "85a5143b-0dab-416c-9c43-f7c9fa7c4fc8"
+      "views": 1
     },
     {
       "id": "475ed759-1d0e-49b3-83a9-89bafee3a639",
@@ -79,6 +80,14 @@
       "price": "10",
       "description": "sweet",
       "manufacturer": "Meerut"
+    },
+    {
+      "title": "Pomogranate",
+      "quantity": "10",
+      "price": "1000",
+      "description": "sweet",
+      "manufacturer": "Meerut",
+      "id": "fae6cefc-e190-4919-ad2d-adb091afcaa0"
     }
   ],
   "UserData": [
@@ -96,6 +105,15 @@
       "firstname": "Pratyush",
       "lastname": "MISHRA",
       "email": "pratyush16@gmail.com",
+      "password": "123456",
+      "location": "meerut",
+      "mobilenumber": "1234567890"
+    },
+    {
+      "id": "212a07e0-9567-4f4f-ae7f-6fd6709e7f90",
+      "firstname": "Pratyush ",
+      "lastname": "MISHRA",
+      "email": "pratyush@gmail.com",
       "password": "123456",
       "location": "meerut",
       "mobilenumber": "1234567890"
