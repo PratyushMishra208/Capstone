@@ -1,6 +1,7 @@
 import React,{lazy,Suspense} from 'react';
 // import logo from './logo.svg';
 import './App.css';
+
 import Header from './Header'
 import Home from './Home';
 // import ProductList from './ProductList'
@@ -38,6 +39,7 @@ import About from './About';
         </Route>
         <Route path="/Add Product">
           <AddProduct />
+        
         </Route>
         <Route path="/Update Product">
           <UpdateProduct />
@@ -56,6 +58,7 @@ import About from './About';
         </Route>
         
       </Switch>
+     
       <Footer />
     </Router>
   
